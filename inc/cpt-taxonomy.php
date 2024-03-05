@@ -92,13 +92,17 @@ function hk_register_custom_post_types() {
         'hierarchical'       => false,
         'menu_position'      => 6,
         'menu_icon'          => 'dashicons-id',
-        'supports'           => array( 'thumbnail' ),
+        'supports'           => array( 'title', 'thumbnail', 'editor' ),
+        'template'           => array( 
+            array( 'core/paragraph', array( 'placeholder' => "Add a short biography..." ) ),
+            array( 'core/button', array( 'placeholder' => "Add a link to student portfolio..." ) ),
+         ),
+        'template_lock'      => 'all',
     );
-
     register_post_type( 'hk-student', $args );
+
 }
 add_action( 'init', 'hk_register_custom_post_types' );
-
 
 
 function hk_register_taxonomies() {
