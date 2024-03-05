@@ -150,6 +150,11 @@ function hk_school_scripts() {
 add_action( 'wp_enqueue_scripts', 'hk_school_scripts' );
 
 /**
+ * Register Custom Post Types & Customer Taxnomies
+ */
+require get_template_directory() . '/inc/cpt-taxonomy.php';
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
