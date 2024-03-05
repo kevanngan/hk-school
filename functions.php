@@ -180,3 +180,15 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+// Change title placeholder for student cpt
+function change_student_title_placeholder( $title_placeholder ) {
+    global $post_type;
+
+    if ( 'hk-student' === $post_type ) {
+        $title_placeholder = 'Add student name';
+    }
+
+    return $title_placeholder;
+}
+add_filter( 'enter_title_here', 'change_student_title_placeholder' );
