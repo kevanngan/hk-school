@@ -181,6 +181,18 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// Change title placeholder for staff cpt
+function change_staff_title_placeholder( $title_placeholder ) {
+    global $post_type;
+
+    if ( 'hk-staff' === $post_type ) {
+        $title_placeholder = 'Add staff name';
+    }
+
+    return $title_placeholder;
+}
+add_filter( 'enter_title_here', 'change_staff_title_placeholder' );
+
 // Change title placeholder for student cpt
 function change_student_title_placeholder( $title_placeholder ) {
     global $post_type;
