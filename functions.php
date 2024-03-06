@@ -122,6 +122,14 @@ function hk_school_content_width() {
 }
 add_action( 'after_setup_theme', 'hk_school_content_width', 0 );
 
+
+// Add support for Wide and Full alignment options in the block editor
+function hk_school_content_width() {
+	add_theme_support('align-wide');
+    add_theme_support('align-full');
+}
+add_action( 'after_setup_theme', 'hk_school_content_width', 0 );
+
 /**
  * Register widget area.
  *
@@ -188,6 +196,18 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+// Change title placeholder for staff cpt
+function change_staff_title_placeholder( $title_placeholder ) {
+    global $post_type;
+
+    if ( 'hk-staff' === $post_type ) {
+        $title_placeholder = 'Add staff name';
+    }
+
+    return $title_placeholder;
+}
+add_filter( 'enter_title_here', 'change_staff_title_placeholder' );
 
 // Change title placeholder for student cpt
 function change_student_title_placeholder( $title_placeholder ) {
