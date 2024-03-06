@@ -46,6 +46,14 @@ function hk_school_setup() {
 		*/
 	add_theme_support( 'post-thumbnails' );
 
+	// Custom crop images
+	add_image_size(
+		'student-thumbnail-200px-300px', // name of crop
+		200,							 // maximum width of pixels
+		300,							 // maximum height of pixels
+		true							 // cropped image
+	);
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
