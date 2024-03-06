@@ -116,11 +116,11 @@ add_action( 'after_setup_theme', 'hk_school_content_width', 0 );
 
 
 // Add support for Wide and Full alignment options in the block editor
-function hk_school_content_width() {
+function hk_school_alignment() {
 	add_theme_support('align-wide');
     add_theme_support('align-full');
 }
-add_action( 'after_setup_theme', 'hk_school_content_width', 0 );
+add_action( 'after_setup_theme', 'hk_school_alignment', 0 );
 
 /**
  * Register widget area.
