@@ -46,8 +46,7 @@ Temporary Items
 ##############
 .sass-cache
 *.scssc
-sass\style.css.map
-
+sass/style.css.map
 
 # Code editor folders or files #
 ######################################
