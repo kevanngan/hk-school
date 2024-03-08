@@ -17,3 +17,17 @@
         font-weight: 700;
     }
 }
+
+@media screen and (min-width: 37.5em) {
+    .staff {
+        @include flex-row-wrap($justify-content: space-between);
+
+        h2 {
+            width: 100%;
+        }
+
+        article {
+            width: 46%;
+        }
+    }
+}
