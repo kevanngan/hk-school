@@ -15,7 +15,7 @@
 		ul {
 			@include flex-column($align-items: center);
 			width: 100%;
-			background-color: $color__subMenu;
+			background-color: $color__sub-menu;
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			z-index: 99999;
 			width: 100%;
