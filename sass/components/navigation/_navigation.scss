@@ -1,6 +1,6 @@
 .main-navigation {
 	display: block;
-	width: 100%;
+	font-size: 0.9rem;
 
 	ul {
 		display: none;
@@ -51,21 +51,30 @@
 
 	li {
 		position: relative;
+		// padding: 1rem;
 
 		&:hover > a,
 		&.focus > a {
+			background-color: $color__accent;
 		}
 	}
 
 	a {
 		display: block;
 		text-decoration: none;
+		padding: 1rem;
 	}
 
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
+	}
+
+
+	.sub-menu {
+		@include flex-column();
+		background-color: $color__header;
 	}
 }
 

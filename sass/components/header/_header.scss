@@ -1,13 +1,27 @@
-header {
+header {    
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     background-color: $color__header;
+    border-top: 3px solid $color__accent;
+}
+
+.header-container {
+    @include flex-row(space-between, center);
+    @include horizontal-margin-center;
+    text-transform: uppercase;
+    max-width: 1050px;
+    font-weight: bold;
 
     .site-title {
-        font-size: 1.25rem;
-    }
+        font-size: 1.4rem;
+        margin: 0;
+        padding: 0.5rem 1rem;
 
-    a {
-        text-decoration: none;
+        a {
+            text-decoration: none;
+        }
     }
-
 }
 

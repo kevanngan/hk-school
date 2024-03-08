@@ -670,7 +670,7 @@ textarea {
 --------------------------------------------- */
 .main-navigation {
 	display: block;
-	width: 100%;
+	font-size: 0.9rem;
 }
 .main-navigation ul {
 	display: none;
@@ -704,10 +704,23 @@ textarea {
 .main-navigation li {
 	position: relative;
 }
+.main-navigation li:hover > a, .main-navigation li.focus > a {
+	background-color: #305c9f;
+}
 .main-navigation a {
 	display: block;
 	text-decoration: none;
+	padding: 1rem;
 }
+.main-navigation .sub-menu {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 0;
+	background-color: black;
+}
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -877,12 +890,32 @@ textarea {
 /* Header
 --------------------------------------------- */
 header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
 	background-color: black;
+	border-top: 3px solid #305c9f;
 }
-header .site-title {
-	font-size: 1.25rem;
+
+.header-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0;
+	margin-left: auto;
+	margin-right: auto;
+	text-transform: uppercase;
+	max-width: 1050px;
+	font-weight: bold;
 }
-header a {
+.header-container .site-title {
+	font-size: 1.4rem;
+	margin: 0;
+	padding: 0.5rem 1rem;
+}
+.header-container .site-title a {
 	text-decoration: none;
 }
 
