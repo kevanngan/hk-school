@@ -1,0 +1,36 @@
+.site-header {
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $color__header;
+    border-top: 3px solid $color__accent;
+}
+
+.header-container {
+    @include flex-row(space-between, center);
+    @include horizontal-margin-center;
+    text-transform: uppercase;
+    max-width: 1050px;
+    font-weight: bold;
+    height: 100%;
+
+    .site-title {
+        font-size: 1.4rem;
+        margin: 0;
+        padding: 0 1rem;
+    }
+
+    .menu-toggle {
+        background: none;
+        border: none;
+
+        svg {
+            height: 35px;
+            width: 35px;
+            fill: white;
+        }
+    }
+}
+

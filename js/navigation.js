@@ -12,7 +12,8 @@
 		return;
 	}
 
-	const button = siteNavigation.getElementsByTagName( 'button' )[ 0 ];
+	// const button = siteNavigation.getElementsByTagName( 'button' )[ 0 ];
+	const button = document.querySelector(".menu-toggle");
 
 	// Return early if the button doesn't exist.
 	if ( 'undefined' === typeof button ) {
@@ -42,15 +43,25 @@
 		}
 	} );
 
+	// Close the nav by removing the toggled class
+	const closeNav = () => {
+		siteNavigation.classList.remove( 'toggled' );
+		button.setAttribute( 'aria-expanded', 'false' );
+	}
+
 	// Remove the .toggled class and set aria-expanded to false when the user clicks outside the navigation.
 	document.addEventListener( 'click', function( event ) {
-		const isClickInside = siteNavigation.contains( event.target );
+		const isClickInside = siteNavigation.contains(event.target) || button.contains(event.target);
 
-		if ( ! isClickInside ) {
-			siteNavigation.classList.remove( 'toggled' );
-			button.setAttribute( 'aria-expanded', 'false' );
-		}
+		if ( ! isClickInside ) closeNav();
 	} );
+
+	// Automatically close the nav when display exceeds mobile display breakpoint
+	const mobileBreakpoint = window.matchMedia('(min-width: 50em)');
+	mobileBreakpoint.addEventListener("change", function() {
+
+		if ( siteNavigation.classList.contains('toggled') ) closeNav();
+	});
 
 	// Get all the link elements within the menu.
 	const links = menu.getElementsByTagName( 'a' );
