@@ -1,0 +1,47 @@
+.site {
+	max-width: 50rem;
+	margin: 0 auto;
+}
+
+.site-main {
+	overflow: hidden;
+	padding: 0 1rem;
+}
+
+.widget-area {
+	padding: 3rem 1rem 1rem;
+}
+
+@media screen and (min-width: 50em) {
+    .site,
+    .page-template-full-width .site {
+        max-width: 2200px;
+		display: grid;
+        grid-template-columns: 1fr minmax(0, 1000px) 1fr;
+		grid-template-areas:
+			"header header header"
+			". main ."
+			"footer footer footer";
+
+    }
+
+	.site-header {
+		grid-area: header;
+	}
+
+	.site-main {
+		grid-area: main;
+	}
+
+	// .widget-area {
+	// 	grid-area: sidebar;
+	// }
+
+	.page-template-left-sidebar .widget-area {
+		padding: 3rem 3rem 1rem 1rem;
+	}
+
+	.site-footer {
+		grid-area: footer;
+	}
+}
