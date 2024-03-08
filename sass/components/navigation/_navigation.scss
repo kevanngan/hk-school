@@ -13,8 +13,6 @@
 		padding-left: 0;
 
 		ul {
-			$sub-menu-width: 200px;
-
 			@include flex-column($align-items: center);
 			width: 100%;
 			background-color: $color__subMenu;
@@ -80,11 +78,6 @@
 	}
 }
 
-// .sub-menu {
-// 	@include flex-column();
-// 	background-color: $color__header;
-// 	width: fit-content;
-// }
 
 /* Small menu. */
 .menu-toggle,
@@ -110,21 +103,23 @@
 			}
 		}
 
-		// ul {
+		ul {
+			li {
+				width: 100%;
+			}
 
-		// 	width: $sub-menu-width;
-		// }
-
-		// ul ul {
-		// 	float: left;
-		// 	position: absolute;
-		// 	top: 100%;
-		// 	left: -999em;
-	
-		// 	a {
-		// 		width: $sub-menu-width;
-		// 	}
-		// }
+			ul {
+				float: left;
+				position: absolute;
+				top: 100%;
+				left: -999em;
+				width: 200px;
+		
+				a {
+					width: 100%;
+				}
+			}
+		}
 	}
 
 	.menu-toggle {
@@ -134,6 +129,10 @@
 	.main-navigation ul {
 		display: flex;
 	}
+}
+
+.current_page_item {
+	background-color: $color__accent;
 }
 
 .comment-navigation,
