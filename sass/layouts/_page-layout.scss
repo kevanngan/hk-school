@@ -5,7 +5,7 @@
 
 .site-main {
 	overflow: hidden;
-	padding: 0 1rem;
+	padding: 4rem 1rem;
 }
 
 .widget-area {
@@ -32,10 +32,6 @@
 	.site-main {
 		grid-area: main;
 	}
-
-	// .widget-area {
-	// 	grid-area: sidebar;
-	// }
 
 	.page-template-left-sidebar .widget-area {
 		padding: 3rem 3rem 1rem 1rem;
