@@ -148,6 +148,18 @@ function hk_school_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+
+	register_sidebar( 
+		array(
+			'name'          => esc_html__( 'Footer Image', 'hk-school' ),
+			'id'            => 'footer-image-widget-area',
+			'description'   => esc_html__( 'Add footer image here.', 'hk-school' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		) 
+	);
 }
 add_action( 'widgets_init', 'hk_school_widgets_init' );
 
