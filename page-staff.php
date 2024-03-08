@@ -76,7 +76,7 @@ get_header();
 									// Output courses if they exist
 									if ( get_field( "courses" ) ) {
 										?>
-										<p>Courses: 
+										<p class="courses">Courses: 
 										<?php
 										$courses = get_field( "courses" );
 										foreach ( $courses as $index => $value ) {
@@ -95,12 +95,11 @@ get_header();
 									if ( get_field( "instructor_website" ) ) {
 										?>
 										<p>
-											<a href="<?php echo esc_url( get_field( "instructor_website" ) ) ?>">Instructor Website</a>
+											<a class="instructor-website" href="<?php echo esc_url( get_field( "instructor_website" ) ) ?>">Instructor Website</a>
 										</p>
 										<?php
 									}
 								}
-
 							}
 							?>
 						</article>

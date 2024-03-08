@@ -13,8 +13,7 @@
 }
 
 @media screen and (min-width: 50em) {
-    .site,
-    .page-template-full-width .site {
+    .site {
         max-width: 2200px;
 		display: grid;
         grid-template-columns: 1fr minmax(0, 1000px) 1fr;
