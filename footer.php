@@ -13,7 +13,7 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<nav><?php echo wp_get_attachment_image( 100, 'full'); ?></nav>
+			<?php the_custom_logo(); ?>
 
 			<section class="footer-credits">
 				<h2>Credits</h2>
@@ -23,12 +23,10 @@
 
 			<nav class="footer-nav">
 				<h2>Links</h2>
-				<ul id="menu-footer-navigation" class="menu"></ul>
+				<?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?>
 			</nav>
 
 		</div><!-- .site-info -->
-
-		<?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
