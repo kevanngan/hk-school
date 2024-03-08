@@ -10,6 +10,7 @@ footer {
 
         h2 {
             margin: 10.5px 0;
+            font-size: 21px;
         }
 
         img {
@@ -32,4 +33,20 @@ footer {
 
         }
     }
+
+@media (min-width: 62.5em) {
+    padding: 2rem 1rem;
+
+    .site-info {
+        @include flex-row(space-evenly, start, 0);
+
+        h2 {
+            font-size: 1.75rem;
+        }
+        
+        .footer-credits {
+            text-align: left;
+        }
+    }
+}
 }

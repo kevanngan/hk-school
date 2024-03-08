@@ -13,7 +13,7 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<?php the_custom_logo(); ?>
+			<div class="footer-logo"><?php the_custom_logo(); ?></div>
 
 			<section class="footer-credits">
 				<h2>Credits</h2>
