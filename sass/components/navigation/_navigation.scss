@@ -1,5 +1,9 @@
 .main-navigation {
-	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 57px;
+	background-color: black;
 	font-size: 0.9rem;
 
 	ul {
@@ -15,6 +19,7 @@
 			top: 100%;
 			left: -999em;
 			z-index: 99999;
+			width: 100%;
 
 			ul {
 				left: -999em;
@@ -22,7 +27,6 @@
 			}
 
 			li {
-
 				&:hover > ul,
 				&.focus > ul {
 					display: block;
@@ -32,6 +36,7 @@
 
 			a {
 				width: 200px;
+				text-align: center;
 			}
 
 			:hover > a,
@@ -51,7 +56,7 @@
 
 	li {
 		position: relative;
-		// padding: 1rem;
+		height: 100%;
 
 		&:hover > a,
 		&.focus > a {
@@ -60,9 +65,11 @@
 	}
 
 	a {
-		display: block;
+		@include flex-row(center, center);
+		align-items: center;
 		text-decoration: none;
 		padding: 1rem;
+		height: 100%;
 	}
 
 	.current_page_item > a,
@@ -84,7 +91,30 @@
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+.menu-toggle {
+	position: absolute;
+	// top: -55px;
+	right: 0;
+}
+
+@media screen and (min-width: 50em) {
+
+	.main-navigation {
+		@include flex-row(center, center);
+		position: relative;
+		top: 0;
+		font-size: 0.9rem;
+		height: 100%;
+
+		.menu-header-navigation-container {
+			@include flex-row(center, center);
+			height: 100%;
+
+			.nav-menu {
+				height: 100%;
+			}
+		}
+	}
 
 	.menu-toggle {
 		display: none;

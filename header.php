@@ -29,7 +29,9 @@
 		<div class="header-container">
 			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 			<nav id="site-navigation" class="main-navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'hk-school' ); ?></button>
+				<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+					<?php get_template_part( 'assets/images/menu' ) ?>
+				</button> -->
 				<?php
 				wp_nav_menu(
 					array(
@@ -39,5 +41,9 @@
 				);
 				?>
 			</nav><!-- #site-navigation -->
+
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+				<?php get_template_part( 'assets/images/menu' ) ?>
+			</button>
 		</div>
 	</header><!-- #masthead -->
