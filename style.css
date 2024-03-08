@@ -532,13 +532,13 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-	color: #4169e1;
+	color: white;
 }
 a:visited {
-	color: #800080;
+	color: white;
 }
 a:hover, a:focus, a:active {
-	color: #191970;
+	color: white;
 }
 a:focus {
 	outline: thin dotted;
@@ -876,6 +876,16 @@ textarea {
 
 /* Header
 --------------------------------------------- */
+header {
+	background-color: black;
+}
+header .site-title {
+	font-size: 1.25rem;
+}
+header a {
+	text-decoration: none;
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
