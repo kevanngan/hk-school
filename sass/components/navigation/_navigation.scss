@@ -3,7 +3,7 @@
 	left: 0;
 	right: 0;
 	top: 57px;
-	background-color: black;
+	background-color: $color__header;
 	font-size: 0.9rem;
 
 	ul {
@@ -13,11 +13,12 @@
 		padding-left: 0;
 
 		ul {
+			$sub-menu-width: 200px;
+
+			@include flex-column($align-items: center);
+			width: 100%;
+			background-color: $color__subMenu;
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 100%;
-			left: -999em;
 			z-index: 99999;
 			width: 100%;
 
@@ -35,8 +36,8 @@
 			}
 
 			a {
-				width: 200px;
 				text-align: center;
+				width: 100%;
 			}
 
 			:hover > a,
@@ -77,24 +78,18 @@
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
 	}
-
-
-	.sub-menu {
-		@include flex-column();
-		background-color: $color__header;
-	}
 }
+
+// .sub-menu {
+// 	@include flex-column();
+// 	background-color: $color__header;
+// 	width: fit-content;
+// }
 
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
-}
-
-.menu-toggle {
-	position: absolute;
-	// top: -55px;
-	right: 0;
 }
 
 @media screen and (min-width: 50em) {
@@ -114,6 +109,22 @@
 				height: 100%;
 			}
 		}
+
+		// ul {
+
+		// 	width: $sub-menu-width;
+		// }
+
+		// ul ul {
+		// 	float: left;
+		// 	position: absolute;
+		// 	top: 100%;
+		// 	left: -999em;
+	
+		// 	a {
+		// 		width: $sub-menu-width;
+		// 	}
+		// }
 	}
 
 	.menu-toggle {
