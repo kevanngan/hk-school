@@ -1,44 +1,36 @@
-// .site {
-// 	max-width: 50rem;
-// 	margin: 0 auto;
-// }
-
-// .site-main {
-// 	overflow: hidden;
-// 	padding: 4rem 1rem 1rem;
-// }
+body {
+	overflow-x: hidden;
+}
 
 .widget-area {
 	padding: 3rem 1rem 1rem;
 }
 
-// @media screen and (min-width: 50em) {
-    .site {
-        max-width: 2200px;
-		display: grid;
-        grid-template-columns: 1fr minmax(0, 1000px) 1fr;
-		grid-template-areas:
-			"header header header"
-			". main ."
-			"footer footer footer";
+.site {
+	max-width: 2200px;
+	display: grid;
+	grid-template-columns: 1fr minmax(0, 1000px) 1fr;
+	grid-template-areas:
+		"header header header"
+		". main ."
+		"footer footer footer";
 
-    }
+}
 
-	.site-header {
-		grid-area: header;
-	}
+.site-header {
+	grid-area: header;
+}
 
-	.site-main {
-		grid-area: main;
-		// overflow: hidden;
-		padding: 4rem 1rem 1rem;
-	}
+.site-main {
+	grid-area: main;
+	// overflow: hidden;
+	padding: 4rem 1rem 1rem;
+}
 
-	.page-template-left-sidebar .widget-area {
-		padding: 3rem 3rem 1rem 1rem;
-	}
+.page-template-left-sidebar .widget-area {
+	padding: 3rem 3rem 1rem 1rem;
+}
 
-	.site-footer {
-		grid-area: footer;
-	}
-// }
+.site-footer {
+	grid-area: footer;
+}
