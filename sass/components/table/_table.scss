@@ -1,0 +1,37 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr {
+    @include flex-column();
+    padding: 1rem;
+}
+
+th {
+    width: 100%;
+    text-align: left;
+}
+
+thead tr,
+tr:nth-child(even) {
+    background-color: #EEEEEE;
+}
+
+
+
+@media screen and (min-width: 37.5em) {
+    tr {
+        display: table-row;
+    }
+
+    th, 
+    td {
+        padding: 2rem;
+        text-align: center;
+    }
+
+    th {
+        width: 33.3333%;
+    }
+}
