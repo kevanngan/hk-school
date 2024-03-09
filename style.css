@@ -689,6 +689,9 @@ textarea {
 	background-color: black;
 	font-size: 0.9rem;
 }
+.main-navigation .current_page_item {
+	background-color: #305C9F;
+}
 .main-navigation ul {
 	display: none;
 	list-style: none;
@@ -790,10 +793,6 @@ textarea {
 		display: flex;
 	}
 }
-.current_page_item {
-	background-color: #305C9F;
-}
-
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {

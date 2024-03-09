@@ -6,6 +6,10 @@
 	background-color: $color__header;
 	font-size: 0.9rem;
 
+	.current_page_item {
+		background-color: $color__accent;
+	}
+
 	ul {
 		display: none;
 		list-style: none;
@@ -129,10 +133,6 @@
 	.main-navigation ul {
 		display: flex;
 	}
-}
-
-.current_page_item {
-	background-color: $color__accent;
 }
 
 .comment-navigation,
