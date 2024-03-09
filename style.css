@@ -822,11 +822,6 @@ textarea {
 	display: block;
 }
 
-.post,
-.page {
-	margin: 0 0 1.5em;
-}
-
 .updated:not(.published) {
 	display: none;
 }
@@ -949,10 +944,6 @@ textarea {
 /* Footer
 --------------------------------------------- */
 footer {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
 	background-color: #333333;
 	color: #ffffff;
 	padding: 1rem;
@@ -973,7 +964,7 @@ footer .site-info a {
 	font-weight: 700;
 }
 footer .site-info a:hover {
-	color: #305c9f;
+	color: #305C9F;
 }
 footer .site-info img {
 	max-width: 150px;
@@ -1073,6 +1064,22 @@ footer .site-info .footer-nav #menu-footer-navigation {
 	font-weight: 700;
 }
 
+@media screen and (min-width: 37.5em) {
+	.staff {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 0;
+	}
+	.staff h2 {
+		width: 100%;
+	}
+	.staff article {
+		width: 46%;
+	}
+}
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
