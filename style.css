@@ -649,7 +649,7 @@ textarea {
 
 .site-main {
 	overflow: hidden;
-	padding: 4rem 1rem;
+	padding: 4rem 1rem 1rem;
 }
 
 .widget-area {
@@ -1043,6 +1043,45 @@ footer .site-info .footer-nav #menu-footer-navigation {
 	fill: white;
 }
 
+/* Table
+--------------------------------------------- */
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+tr {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 0;
+	padding: 1rem;
+}
+
+th {
+	width: 100%;
+	text-align: left;
+}
+
+thead tr,
+tr:nth-child(even) {
+	background-color: #EEEEEE;
+}
+
+@media screen and (min-width: 37.5em) {
+	tr {
+		display: table-row;
+	}
+	th,
+	td {
+		padding: 2rem;
+		text-align: center;
+	}
+	th {
+		width: 33.3333%;
+	}
+}
 /*--------------------------------------------------------------
 # Pages
 --------------------------------------------------------------*/
