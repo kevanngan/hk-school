@@ -1087,37 +1087,6 @@ tr:nth-child(even) {
 --------------------------------------------------------------*/
 /* Home Page
 --------------------------------------------- */
-.staff h2 {
-	margin-bottom: 0;
-	text-decoration: underline;
-}
-.staff p {
-	margin-top: 0;
-}
-.staff .courses {
-	margin-bottom: 0;
-}
-.staff .instructor-website {
-	color: #003C71;
-	font-weight: 700;
-}
-
-@media screen and (min-width: 37.5em) {
-	.staff {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		align-items: flex-start;
-		gap: 0;
-	}
-	.staff h2 {
-		width: 100%;
-	}
-	.staff article {
-		width: 46%;
-	}
-}
 /* Staff Page
 --------------------------------------------- */
 .staff h2 {
