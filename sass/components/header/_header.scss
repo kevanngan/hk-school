@@ -6,6 +6,7 @@
     right: 0;
     background-color: $color__header;
     border-top: 3px solid $color__accent;
+    z-index: 1000;
 }
 
 .header-container {

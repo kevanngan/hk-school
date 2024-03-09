@@ -39,13 +39,16 @@ while ( have_posts() ) :
                 ?>
                 <a href="<?php the_permalink(); ?>">
                     <?php the_post_thumbnail( "medium" ); ?>
-                    <p><?php the_title(); ?></p>
+                    <p class='blog-title'><?php the_title(); ?></p>
                 </a>
 
                 <?php
             }
             wp_reset_postdata();
             ?>
+            <p class="blog-link">
+                <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ) ?>">See All News</a>
+            </p>
         </section>
         <?php
     endif;
