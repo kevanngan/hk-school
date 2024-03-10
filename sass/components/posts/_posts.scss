@@ -1,0 +1,26 @@
+.post {
+    margin-bottom: 4rem;
+
+    .entry-meta {
+        margin-bottom: 0.5rem;
+    }
+
+    .entry-content {
+        margin-top: 1rem;
+    }
+
+    .entry-footer {
+        @include flex-column($justify-content: center);
+    }
+}
+
+@media screen and (min-width: 50em) {
+    .post {
+        .entry-footer {
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 3rem;
+        }
+    }
+}

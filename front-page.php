@@ -17,7 +17,7 @@ while ( have_posts() ) :
     ?>
 
     <section class="home-intro">
-        <h1><?php the_title(); ?></h1>
+        <h1><?php esc_html__(the_title()); ?></h1>
         <!-- Output the content of the homepage block editor -->
         <?php the_content(); ?>
     </section>
@@ -39,7 +39,7 @@ while ( have_posts() ) :
                 ?>
                 <a class="main-link" href="<?php the_permalink(); ?>">
                     <?php the_post_thumbnail( "medium" ); ?>
-                    <p class="blog-title"><?php the_title(); ?></p>
+                    <p class="blog-title"><?php esc_html__(the_title()); ?></p>
                 </a>
 
                 <?php
