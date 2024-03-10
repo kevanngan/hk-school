@@ -233,3 +233,20 @@ function change_student_title_placeholder( $title_placeholder ) {
     return $title_placeholder;
 }
 add_filter( 'enter_title_here', 'change_student_title_placeholder' );
+
+// This function adds the custom classes to the anchor tags
+function add_custom_classes_to_links($thelist) {
+    $custom_classes = 'main-link underline-link';
+    $thelist = str_replace('<a href=', '<a class="' . $custom_classes . '" href=', $thelist);
+    return $thelist;
+}
+add_filter( 'the_category', 'add_custom_classes_to_links', 999 );
+add_filter( 'the_tags', 'add_custom_classes_to_links', 999 );
+add_filter( 'term_links-hk-student-category', 'add_custom_classes_to_links', 999 );
+
+// This function adds the custom classes to the 'Leave a Comment' link
+function add_custom_classes_to_comments_link() {
+	$attributes .= ' class="main-link underline-link"';
+    return $attributes;
+}
+add_filter('comments_popup_link_attributes', 'add_custom_classes_to_comments_link');

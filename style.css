@@ -944,61 +944,61 @@ body {
 
 /* Footer
 --------------------------------------------- */
-footer {
+.site-footer {
 	background-color: #333333;
 	color: #ffffff;
 	padding: 1rem;
 	margin-top: 1.25rem;
 }
-footer .site-info {
+.site-footer .site-info {
 	text-align: center;
 }
-footer .site-info h2 {
+.site-footer .site-info h2 {
 	margin: 10.5px 0;
 	font-size: 21px;
 }
-footer .site-info p,
-footer .site-info a {
+.site-footer .site-info p,
+.site-footer .site-info a {
 	font-size: 14px;
 }
-footer .site-info a {
+.site-footer .site-info a {
 	font-weight: 700;
 }
-footer .site-info a:hover {
+.site-footer .site-info a:hover {
 	color: #305C9F;
 }
-footer .site-info img {
+.site-footer .site-info img {
 	max-width: 150px;
 }
-footer .site-info .footer-credits p {
+.site-footer .site-info .footer-credits p {
 	margin-top: 0;
 	margin-bottom: 21px;
 }
-footer .site-info .footer-nav #menu-footer-navigation {
+.site-footer .site-info .footer-nav #menu-footer-navigation {
 	margin: 0;
 	padding: 0;
 }
 @media (min-width: 62.5em) {
-	footer {
+	.site-footer {
 		padding: 0;
 	}
-	footer .site-info {
+	.site-footer .site-info {
 		display: grid;
 		grid-template-columns: 1fr repeat(3, minmax(auto, 20.83rem)) 1fr;
 		padding: 2rem 1rem;
 		text-align: left;
 	}
-	footer .site-info h2 {
+	.site-footer .site-info h2 {
 		font-size: 1.75rem;
 	}
-	footer .site-info .footer-logo {
+	.site-footer .site-info .footer-logo {
 		grid-column: 2/3;
 		margin: 0;
 	}
-	footer .site-info .footer-credits {
+	.site-footer .site-info .footer-credits {
 		text-align: left;
 	}
-	footer .site-info .footer-nav {
+	.site-footer .site-info .footer-nav {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
