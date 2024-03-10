@@ -912,6 +912,10 @@ body {
 .widget-area tr {
 	display: table-row;
 }
+.widget-area thead tr,
+.widget-area tr:nth-child(even) {
+	background-color: transparent;
+}
 
 @media screen and (min-width: 50em) {
 	.widget-area {
@@ -1121,6 +1125,11 @@ table {
 	width: 100%;
 }
 
+thead tr,
+tr:nth-child(even) {
+	background-color: #EEEEEE;
+}
+
 .page-92 tr {
 	display: flex;
 	flex-direction: column;
@@ -1132,10 +1141,6 @@ table {
 .page-92 th {
 	width: 100%;
 	text-align: left;
-}
-.page-92 thead tr,
-.page-92 tr:nth-child(even) {
-	background-color: #EEEEEE;
 }
 
 @media screen and (min-width: 37.5em) {

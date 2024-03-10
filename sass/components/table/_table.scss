@@ -3,6 +3,11 @@ table {
     width: 100%;
 }
 
+thead tr,
+tr:nth-child(even) {
+    background-color: #EEEEEE;
+}
+
 .page-92 {
     tr {
         @include flex-column();
@@ -14,10 +19,6 @@ table {
         text-align: left;
     }
 
-    thead tr,
-    tr:nth-child(even) {
-        background-color: #EEEEEE;
-    }
 }
 
 
