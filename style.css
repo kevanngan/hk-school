@@ -1103,6 +1103,9 @@ tr:nth-child(even) {
 	color: #003C71;
 	font-weight: 700;
 }
+.recent-news a:hover {
+	color: #305C9F;
+}
 .recent-news img {
 	display: block;
 	width: 100%;
@@ -1121,6 +1124,9 @@ tr:nth-child(even) {
 .recent-news .blog-link {
 	width: 100%;
 	margin-top: 0;
+}
+.recent-news .blog-link:hover {
+	text-decoration: underline;
 }
 
 /* Staff Page

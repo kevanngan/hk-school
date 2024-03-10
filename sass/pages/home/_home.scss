@@ -12,6 +12,10 @@
         font-weight: 700;
     }
 
+    a:hover {
+        color: $color__main-links-hover;
+    }
+
     img {
         display: block;
         width: 100%;
@@ -32,5 +36,9 @@
     .blog-link {
         width: 100%;
         margin-top: 0;
+    }
+
+    .blog-link:hover {
+        text-decoration: underline;
     }
 }
