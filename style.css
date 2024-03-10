@@ -890,12 +890,9 @@ body {
 .widget-area ul {
 	list-style-type: square;
 }
-.widget-area ul li a {
+.widget-area a {
 	color: #003C71;
 	font-weight: 700;
-}
-.widget-area .wp-calendar-nav {
-	color: #003C71;
 }
 .widget-area table,
 .widget-area th,
