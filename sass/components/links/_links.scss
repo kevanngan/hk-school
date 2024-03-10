@@ -1,0 +1,11 @@
+a.main-link {
+    color: $color__main-links;
+}
+
+a.main-link:hover {
+    color: $color__main-links-hover;
+}
+
+a.underline-link:hover {
+    text-decoration: underline;
+}

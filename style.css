@@ -1081,6 +1081,20 @@ tr:nth-child(even) {
 		width: 33.3333%;
 	}
 }
+/* Links
+--------------------------------------------- */
+a.main-link {
+	color: #003C71;
+}
+
+a.main-link:hover {
+	color: #305C9F;
+}
+
+a.underline-link:hover {
+	text-decoration: underline;
+}
+
 /*--------------------------------------------------------------
 # Pages
 --------------------------------------------------------------*/
@@ -1100,11 +1114,7 @@ tr:nth-child(even) {
 }
 .recent-news a {
 	position: relative;
-	color: #003C71;
 	font-weight: 700;
-}
-.recent-news a:hover {
-	color: #305C9F;
 }
 .recent-news img {
 	display: block;
@@ -1121,12 +1131,9 @@ tr:nth-child(even) {
 	text-align: center;
 	background-color: rgba(238, 238, 238, 0.8);
 }
-.recent-news .blog-link {
+.recent-news .link-wrapper {
 	width: 100%;
 	margin-top: 0;
-}
-.recent-news .blog-link:hover {
-	text-decoration: underline;
 }
 
 /* Staff Page

@@ -37,17 +37,17 @@ while ( have_posts() ) :
             while ( $query -> have_posts() ) {
                 $query -> the_post();
                 ?>
-                <a href="<?php the_permalink(); ?>">
+                <a class="main-link" href="<?php the_permalink(); ?>">
                     <?php the_post_thumbnail( "medium" ); ?>
-                    <p class='blog-title'><?php the_title(); ?></p>
+                    <p class="blog-title"><?php the_title(); ?></p>
                 </a>
 
                 <?php
             }
             wp_reset_postdata();
             ?>
-            <p class="blog-link">
-                <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ) ?>">See All News</a>
+            <p class="link-wrapper">
+                <a class="main-link underline-link" href="<?php echo get_permalink( get_option( "page_for_posts" ) ) ?>">See All News</a>
             </p>
         </section>
         <?php
