@@ -272,36 +272,30 @@ function change_student_title_placeholder( $title_placeholder ) {
 add_filter( 'enter_title_here', 'change_student_title_placeholder' );
 
 // This function adds the custom classes to the anchor tags
-function add_custom_classes_to_links($thelist) {
+function add_custom_classes_to_links($html) {
     $custom_classes = 'main-link underline-link';
-    $thelist = str_replace(
+    $html = str_replace(
 		'<a href=', '<a class="' . $custom_classes . '" href=', 
-		$thelist
+		$html
 	);
-    return $thelist;
+    return $html;
 }
 add_filter( 'the_category', 'add_custom_classes_to_links', 999 );
 add_filter( 'the_tags', 'add_custom_classes_to_links', 999 );
 add_filter( 'term_links-hk-student-category', 'add_custom_classes_to_links', 999 );
+add_filter( 'next_post_link', 'add_custom_classes_to_links', 999 );
+add_filter( 'previous_post_link', 'add_custom_classes_to_links', 999 );
 
 // This function adds the custom classes to the 'Leave a Comment' link
 function add_custom_classes_to_comments_link($attributes) {
 	$attributes .= ' class="main-link underline-link"';
     return $attributes;
 }
-add_filter( 'comments_popup_link_attributes', 'add_custom_classes_to_comments_link' );
+add_filter( 'comments_popup_link_attributes', 'add_custom_classes_to_comments_link', 999 );
 
-// Add data-aos attribute to posts to enable animate on scroll
-function add_aos_to_posts($content) {
-	if ( get_post_type() === 'post' ) {
-		// Code taken from ChatGPT
-		$content = preg_replace(
-			'/<article(.*?)>/', 
-			'<article$1 data-aos="fade-up">', 
-			$content
-		);
-	}
-
-	return $content;
+function remove_comment_form_cookies_consent($formFields) {
+	unset($formFields['cookies']);
+	return $formFields;
 }
-add_filter('the_content', 'add_aos_to_posts');
+
+add_filter( 'comment_form_default_fields', 'remove_comment_form_cookies_consent', 999 );

@@ -36,15 +36,11 @@
 
 	ul {
 		list-style-type: square;
-
-		li a {
-			color: $color__main-links;
-			font-weight: 700;
-		}
 	}
 
-	.wp-calendar-nav {
+	a {
 		color: $color__main-links;
+		font-weight: 700;
 	}
 
 	table,

@@ -1,0 +1,12 @@
+input[type="text"],
+input[type="email"],
+input[type="url"] {
+    width: 100%;
+}
+
+input[type="submit"] {
+    background-color: $color__accent;
+    color: white;
+    padding: 1rem;
+    width: 100%;
+}
