@@ -186,7 +186,7 @@ function hk_school_scripts() {
 	}
 
 	// Import Animate on Scroll css and script
-	if (get_post_type() === 'post') {
+	if ( get_post_type() === 'post' ) {
 		wp_enqueue_style(
 			'aos-styles',
 			get_template_directory_uri() . '/css/aos.css',
@@ -199,6 +199,15 @@ function hk_school_scripts() {
 			get_template_directory_uri() . '/js/aos.js',
 			array(),
 			'2.3.1',
+			array( 'strategy' => 'defer' )
+		);
+
+		// Initialize AOS
+		wp_enqueue_script(
+			'aos-init', 
+			get_template_directory_uri() . '/js/aos_init.js',
+			array( 'aos-scripts' ),
+			_S_VERSION,
 			array( 'strategy' => 'defer' )
 		);
 	}
@@ -265,7 +274,10 @@ add_filter( 'enter_title_here', 'change_student_title_placeholder' );
 // This function adds the custom classes to the anchor tags
 function add_custom_classes_to_links($thelist) {
     $custom_classes = 'main-link underline-link';
-    $thelist = str_replace('<a href=', '<a class="' . $custom_classes . '" href=', $thelist);
+    $thelist = str_replace(
+		'<a href=', '<a class="' . $custom_classes . '" href=', 
+		$thelist
+	);
     return $thelist;
 }
 add_filter( 'the_category', 'add_custom_classes_to_links', 999 );
@@ -277,4 +289,19 @@ function add_custom_classes_to_comments_link($attributes) {
 	$attributes .= ' class="main-link underline-link"';
     return $attributes;
 }
-add_filter('comments_popup_link_attributes', 'add_custom_classes_to_comments_link');
+add_filter( 'comments_popup_link_attributes', 'add_custom_classes_to_comments_link' );
+
+// Add data-aos attribute to posts to enable animate on scroll
+function add_aos_to_posts($content) {
+	if ( get_post_type() === 'post' ) {
+		// Code taken from ChatGPT
+		$content = preg_replace(
+			'/<article(.*?)>/', 
+			'<article$1 data-aos="fade-up">', 
+			$content
+		);
+	}
+
+	return $content;
+}
+add_filter('the_content', 'add_aos_to_posts');
