@@ -245,7 +245,7 @@ add_filter( 'the_tags', 'add_custom_classes_to_links', 999 );
 add_filter( 'term_links-hk-student-category', 'add_custom_classes_to_links', 999 );
 
 // This function adds the custom classes to the 'Leave a Comment' link
-function add_custom_classes_to_comments_link() {
+function add_custom_classes_to_comments_link($attributes) {
 	$attributes .= ' class="main-link underline-link"';
     return $attributes;
 }
