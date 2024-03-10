@@ -654,7 +654,7 @@ body {
 	max-width: 2200px;
 	display: grid;
 	grid-template-columns: 1fr minmax(0, 1000px) 1fr;
-	grid-template-areas: "header header header" ". main ." "footer footer footer";
+	grid-template-areas: "header header header" ". main ." ". sidebar ." "footer footer footer";
 }
 
 .site-header {
@@ -668,6 +668,10 @@ body {
 
 .page-template-left-sidebar .widget-area {
 	padding: 3rem 3rem 1rem 1rem;
+}
+
+.widget-area {
+	grid-area: sidebar;
 }
 
 .site-footer {
