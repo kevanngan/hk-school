@@ -291,19 +291,11 @@ function add_custom_classes_to_comments_link($attributes) {
 	$attributes .= ' class="main-link underline-link"';
     return $attributes;
 }
-add_filter( 'comments_popup_link_attributes', 'add_custom_classes_to_comments_link' );
+add_filter( 'comments_popup_link_attributes', 'add_custom_classes_to_comments_link', 999 );
 
-// Add data-aos attribute to posts to enable animate on scroll
-function add_aos_to_posts($content) {
-	if ( get_post_type() === 'post' ) {
-		// Code taken from ChatGPT
-		$content = preg_replace(
-			'/<article(.*?)>/', 
-			'<article$1 data-aos="fade-up">', 
-			$content
-		);
-	}
-
-	return $content;
+function remove_comment_form_cookies_consent($formFields) {
+	unset($formFields['cookies']);
+	return $formFields;
 }
-add_filter('the_content', 'add_aos_to_posts');
+
+add_filter( 'comment_form_default_fields', 'remove_comment_form_cookies_consent', 999 );
