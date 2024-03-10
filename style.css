@@ -858,6 +858,73 @@ body {
 	max-width: 100%;
 }
 
+.widget-area {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 0;
+}
+.widget-area section {
+	width: 100%;
+}
+.widget-area h2 {
+	font-size: 1.3rem;
+}
+.widget-area .widget_search form .wp-block-search__inside-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 0;
+}
+.widget-area .widget_search form .wp-block-search__inside-wrapper input, .widget-area .widget_search form .wp-block-search__inside-wrapper button {
+	width: 100%;
+}
+.widget-area .widget_search form .wp-block-search__inside-wrapper button {
+	margin: 0;
+	padding: 1rem;
+	background-color: #305C9F;
+	color: white;
+}
+.widget-area ul {
+	list-style-type: square;
+}
+.widget-area ul li a {
+	color: #003C71;
+	font-weight: 700;
+}
+.widget-area .wp-calendar-nav {
+	color: #003C71;
+}
+.widget-area table,
+.widget-area th,
+.widget-area td {
+	border: none;
+}
+.widget-area table td a {
+	color: black;
+}
+.widget-area th {
+	width: 14.2857%;
+	font-weight: 700;
+}
+.widget-area tr {
+	display: table-row;
+}
+
+@media screen and (min-width: 50em) {
+	.widget-area {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 0;
+	}
+	.widget-area section {
+		width: auto;
+	}
+}
 /* Media
 --------------------------------------------- */
 .page-content .wp-smiley,
@@ -1054,7 +1121,7 @@ table {
 	width: 100%;
 }
 
-tr {
+.page-92 tr {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -1062,14 +1129,12 @@ tr {
 	gap: 0;
 	padding: 1rem;
 }
-
-th {
+.page-92 th {
 	width: 100%;
 	text-align: left;
 }
-
-thead tr,
-tr:nth-child(even) {
+.page-92 thead tr,
+.page-92 tr:nth-child(even) {
 	background-color: #EEEEEE;
 }
 

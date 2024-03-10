@@ -3,21 +3,22 @@ table {
     width: 100%;
 }
 
-tr {
-    @include flex-column();
-    padding: 1rem;
-}
+.page-92 {
+    tr {
+        @include flex-column();
+        padding: 1rem;
+    }
+    
+    th {
+        width: 100%;
+        text-align: left;
+    }
 
-th {
-    width: 100%;
-    text-align: left;
+    thead tr,
+    tr:nth-child(even) {
+        background-color: #EEEEEE;
+    }
 }
-
-thead tr,
-tr:nth-child(even) {
-    background-color: #EEEEEE;
-}
-
 
 
 @media screen and (min-width: 37.5em) {

@@ -6,3 +6,75 @@
 		max-width: 100%;
 	}
 }
+
+.widget-area {
+	@include flex-column();
+
+	section {
+		width: 100%;
+	}
+
+
+	h2 {
+		font-size: 1.3rem;
+	}
+
+	.widget_search form .wp-block-search__inside-wrapper {
+		@include flex-column();
+
+		input, button {
+			width: 100%;
+		}
+
+		button {
+			margin: 0;
+			padding: 1rem;
+			background-color: $color__accent;
+			color: white;
+		}
+	}
+
+	ul {
+		list-style-type: square;
+
+		li a {
+			color: $color__main-links;
+			font-weight: 700;
+		}
+	}
+
+	.wp-calendar-nav {
+		color: $color__main-links;
+	}
+
+	table,
+	th,
+	td {
+		border: none;
+	}
+
+	table td a {
+		color: black;
+	}
+
+	th {
+		width: 14.2857%;
+		font-weight: 700;
+	}
+
+	tr {
+		display: table-row;
+	}
+
+	
+}
+
+@media screen and (min-width: 50em) {
+	.widget-area {
+		@include flex-row($justify-content: space-between);
+
+		section {
+			width: auto;
+		}
+	}
+}
