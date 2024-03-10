@@ -95,7 +95,7 @@ get_header();
 									if ( get_field( "instructor_website" ) ) {
 										?>
 										<p>
-											<a class="instructor-website" href="<?php echo esc_url( get_field( "instructor_website" ) ) ?>">Instructor Website</a>
+											<a class="main-link underline-link" href="<?php echo esc_url( get_field( "instructor_website" ) ) ?>">Instructor Website</a>
 										</p>
 										<?php
 									}

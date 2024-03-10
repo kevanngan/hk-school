@@ -1085,6 +1085,7 @@ tr:nth-child(even) {
 --------------------------------------------- */
 a.main-link {
 	color: #003C71;
+	font-weight: 700;
 }
 
 a.main-link:hover {
@@ -1114,7 +1115,6 @@ a.underline-link:hover {
 }
 .recent-news a {
 	position: relative;
-	font-weight: 700;
 }
 .recent-news img {
 	display: block;
@@ -1147,10 +1147,6 @@ a.underline-link:hover {
 }
 .staff .courses {
 	margin-bottom: 0;
-}
-.staff .instructor-website {
-	color: #003C71;
-	font-weight: 700;
 }
 
 @media screen and (min-width: 37.5em) {
