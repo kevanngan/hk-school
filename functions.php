@@ -167,6 +167,15 @@ add_action( 'widgets_init', 'hk_school_widgets_init' );
  * Enqueue scripts and styles.
  */
 function hk_school_scripts() {
+	// Import Open Sans and Inter Google Font
+	wp_enqueue_style( 
+		'hk-school-googlefonts',   // Unique handle
+		'"https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap',   // Url to font css file
+		array(),   // Dependencies
+		null,      // Version set to null for Google Fonts
+		'all'      // Media
+	);
+
 	wp_enqueue_style( 'hk-school-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'hk-school-style', 'rtl', 'replace' );
 
