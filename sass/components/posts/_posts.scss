@@ -10,6 +10,17 @@
     }
 
     .entry-footer {
-        @include flex-row($align-items: center, $gap: 3rem);
+        @include flex-column($justify-content: center);
+    }
+}
+
+@media screen and (min-width: 50em) {
+    .post {
+        .entry-footer {
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 3rem;
+        }
     }
 }

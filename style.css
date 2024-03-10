@@ -1114,12 +1114,20 @@ a.underline-link:hover {
 }
 .post .entry-footer {
 	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	align-items: center;
-	gap: 3rem;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 0;
 }
 
+@media screen and (min-width: 50em) {
+	.post .entry-footer {
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 3rem;
+	}
+}
 /*--------------------------------------------------------------
 # Pages
 --------------------------------------------------------------*/
