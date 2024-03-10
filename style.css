@@ -1195,6 +1195,21 @@ a.underline-link:hover {
 		gap: 3rem;
 	}
 }
+/* Posts
+--------------------------------------------- */
+input[type=text],
+input[type=email],
+input[type=url] {
+	width: 100%;
+}
+
+input[type=submit] {
+	background-color: #305C9F;
+	color: white;
+	padding: 1rem;
+	width: 100%;
+}
+
 /*--------------------------------------------------------------
 # Pages
 --------------------------------------------------------------*/
