@@ -1,5 +1,42 @@
 .post-type-archive-hk-student {
-    h1 {
-        font-size: 3rem;
+
+    .site-main {
+        padding: 0 1rem;
+        margin-top: 55px;
+
+        .student-item {
+            max-width: 300px;
+            margin: 0 auto;
+
+            img {
+                width: 300px;
+                height: 200px;
+                object-fit: cover;
+            }
+        }
     }
+
+    @media only screen and (min-width: 37.5em) {
+        .site-main {
+            .students {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+            
+            .student-item {
+                width: 48%;
+                margin: 0 0 3rem;
+            }
+        }
+    }
+
+    @media only screen and (min-width: 56.25em) {
+        .site-main {
+            .student-item {
+                width: 30%;
+            }
+        }
+    }
+
 }
