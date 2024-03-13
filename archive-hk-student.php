@@ -39,14 +39,14 @@ get_header();
 					$query -> the_post();
 					?>
 					<article class="student-item">
-					<h2><a href="<?php the_permalink(); ?>" class="main-link"><?php the_title(); ?></a></h2>
-					<a href="<?php the_permalink(); ?>" class="main-link">
+					<h2><a href="<?php the_permalink(); ?>" class="main-link underline-link"><?php the_title(); ?></a></h2>
+					<a href="<?php the_permalink(); ?>" class="main-link underline-link">
 						<?php the_post_thumbnail('student-thumbnail-300x257'); ?>
 					</a>
 					<p>
 						<?php 
 							echo wp_trim_words(get_the_excerpt(), 25, ''); 
-							echo '<br><a href="' . get_permalink() . '" class="main-link">Read more about the student...</a>';
+							echo '<br><a href="' . get_permalink() . '" class="main-link underline-link">Read more about the student...</a>';
 						?>
 					</p>
 					<p><?php echo get_the_term_list(get_the_ID(), 'hk-student-category', 'Specialty: '); ?></p>
