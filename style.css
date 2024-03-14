@@ -1314,12 +1314,27 @@ input[type=submit] {
 
 /* Student Category Page
 --------------------------------------------- */
-.taxonomy-hk-student-category .site-main {
+.tax-hk-student-category .site-main {
 	margin-top: 55px;
 	padding: 0 1rem;
 }
-.taxonomy-hk-student-category .site-main h2 {
-	font-size: 3rem;
+.tax-hk-student-category .site-main .student-item {
+	clear: both;
+	padding-top: 1rem;
+}
+.tax-hk-student-category .site-main .student-item img {
+	display: block;
+	float: none;
+	margin-left: 0;
+	margin-bottom: 1rem;
+}
+@media only screen and (min-width: 37.5em) {
+	.tax-hk-student-category .site-main .student-item img {
+		display: inline;
+		float: left;
+		margin-right: 1.5rem;
+		margin-bottom: 0;
+	}
 }
 
 /*--------------------------------------------------------------

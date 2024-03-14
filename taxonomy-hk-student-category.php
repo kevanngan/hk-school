@@ -24,7 +24,7 @@ get_header();
 				the_post();
 				?>
 				
-				<article>
+				<article class="student-item">
 					<a href="<?php the_permalink(); ?>" class="main-link underline-link">
 						<h2><?php the_title(); ?></h2>
 					</a>
