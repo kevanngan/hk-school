@@ -1328,6 +1328,9 @@ input[type=submit] {
 	margin-left: 0;
 	margin-bottom: 1rem;
 }
+.tax-hk-student-category .site-main article:first-of-type {
+	padding-top: 0;
+}
 @media only screen and (min-width: 37.5em) {
 	.tax-hk-student-category .site-main .student-item img {
 		display: inline;
