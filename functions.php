@@ -64,8 +64,8 @@ function hk_school_setup() {
 
 	// Custom crop images
 	add_image_size(
-		'student-thumbnail-243x300',  // name of crop
-		243,                          // width in pixels
+		'student-thumbnail-284x300',  // name of crop
+		284,                          // width in pixels
 		300,                          // height in pixels
 		true                          // cropped image
 	);

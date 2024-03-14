@@ -23,7 +23,7 @@ get_header();
 			<article class="single-student-content">
 					<?php
 					if ( has_post_thumbnail() ) {
-						the_post_thumbnail( 'student-thumbnail-243x300', array( 'class' => 'alignright' ) );
+						the_post_thumbnail( 'student-thumbnail-284x300', array( 'class' => 'alignright' ) );
 					} 
 					?>
 					<?php the_content();?>
