@@ -1281,8 +1281,63 @@ input[type=submit] {
 }
 /* Class Page
 --------------------------------------------- */
-.post-type-archive-hk-student h1 {
-	font-size: 3rem;
+.post-type-archive-hk-student .site-main {
+	padding: 0 1rem;
+	margin-top: 55px;
+}
+.post-type-archive-hk-student .site-main .student-item {
+	max-width: 300px;
+	margin: 0 auto;
+}
+.post-type-archive-hk-student .site-main .student-item img {
+	width: 300px;
+	height: 200px;
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+@media only screen and (min-width: 37.5em) {
+	.post-type-archive-hk-student .site-main .students {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	.post-type-archive-hk-student .site-main .student-item {
+		width: 48%;
+		margin: 0 0 3rem;
+	}
+}
+@media only screen and (min-width: 56.25em) {
+	.post-type-archive-hk-student .site-main .student-item {
+		width: 30%;
+	}
+}
+
+/* Student Category Page
+--------------------------------------------- */
+.tax-hk-student-category .site-main {
+	margin-top: 55px;
+	padding: 0 1rem;
+}
+.tax-hk-student-category .site-main .student-item {
+	clear: both;
+	padding-top: 1rem;
+}
+.tax-hk-student-category .site-main .student-item img {
+	display: block;
+	float: none;
+	margin-left: 0;
+	margin-bottom: 1rem;
+}
+.tax-hk-student-category .site-main article:first-of-type {
+	padding-top: 0;
+}
+@media only screen and (min-width: 37.5em) {
+	.tax-hk-student-category .site-main .student-item img {
+		display: inline;
+		float: left;
+		margin-right: 1.5rem;
+		margin-bottom: 0;
+	}
 }
 
 /*--------------------------------------------------------------

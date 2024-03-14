@@ -15,7 +15,7 @@ get_header();
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1><?php single_term_title(); ?></h1>
+			<h1><?php echo single_term_title() . ' Students'; ?></h1>
 			</header><!-- .page-header -->
 
 			<?php
@@ -24,8 +24,8 @@ get_header();
 				the_post();
 				?>
 				
-				<article>
-					<a href="<?php the_permalink(); ?>">
+				<article class="student-item">
+					<a href="<?php the_permalink(); ?>" class="main-link underline-link">
 						<h2><?php the_title(); ?></h2>
 					</a>
 					<?php
@@ -53,4 +53,3 @@ get_header();
 
 <?php
 get_footer();
-
