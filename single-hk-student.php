@@ -15,9 +15,20 @@ get_header();
 		<?php
 		while ( have_posts() ) :
 			the_post();
+			?>
 
-			get_template_part( 'template-parts/content', get_post_type() );
-
+			<div class=entry-title>
+				<h1><?php the_title(); ?></h1>
+			</div>
+			<article class="single-student-content">
+					<?php
+					if ( has_post_thumbnail() ) {
+						the_post_thumbnail( 'student-thumbnail-243x300', array( 'class' => 'alignright' ) );
+					} 
+					?>
+					<?php the_content();?>
+				</article>	
+		<?php
 		endwhile; // End of the loop.
 		?>
 
@@ -42,16 +53,14 @@ get_header();
 				);
 
 				$query = new WP_Query( $args );
-				echo '<h2>Meet other ' . esc_html( $term->name ) . ' students:</h2>';
+				echo '<h3>Meet other ' . esc_html( $term->name ) . ' students:</h3>';
 
 				// Display the links to other students
 				if ( $query->have_posts() ) {
-					echo '<ul>';
 					while ( $query->have_posts() ) {
 						$query->the_post();
-						echo '<li><a href="' . esc_url( get_permalink() ) . '">' . get_the_title() . '</a></li>';
+						echo '<p><a href="' . esc_url( get_permalink() ) . '" class="main-link under-lin">' . get_the_title() . '</a></p>';
 					}
-					echo '</ul>';
 					wp_reset_postdata();
 				}
 			}
