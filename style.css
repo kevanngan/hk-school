@@ -1218,6 +1218,16 @@ input[type=submit] {
 	width: 100%;
 }
 
+/* Student Portfolio
+--------------------------------------------- */
+.student-item a {
+	font-weight: 700;
+}
+
+.student-item a:hover {
+	text-decoration: underline;
+}
+
 /*--------------------------------------------------------------
 # Pages
 --------------------------------------------------------------*/
@@ -1365,9 +1375,6 @@ input[type=submit] {
 	float: none;
 	margin-left: 0;
 	margin-bottom: 1rem;
-}
-.single-hk-student .site-main .single-student-content .wp-block-button {
-	font-weight: 700;
 }
 @media only screen and (min-width: 37.5em) {
 	.single-hk-student .site-main .single-student-content img {
