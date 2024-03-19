@@ -1,39 +1,49 @@
 <?php
 /**
- * Template part for displaying posts
+ * Template part for displaying page content in single-hk-student.php
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package FWD_Starter_Theme
+ * @package HK_School
  */
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		endif;
-		?>
-	</header><!-- .entry-header -->
+<?php
+	
+	?>
 
-	<?php hk_school_post_thumbnail(); ?>
+	<?php
+	$terms = get_the_terms( get_the_ID(), 'hk-student-category' );
 
-	<div class="entry-content">
-		<?php
-		the_content();
+	if ( $terms && ! is_wp_error( $terms ) ) {
+		foreach ( $terms as $term ) {
 
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'hk-school' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
-	</div><!-- .entry-content -->
+			// Fetch other posts with same term using wp_query
+			$args = array(
+				'post_type'      => 'hk-student',
+				'posts_per_page' => -1,
+				'tax_query'      => array(
+					array(
+						'taxonomy' => 'hk-student-category',
+						'field'    => 'slug',
+						'terms'    => $term->slug,
+					),
+				),
+				'post__not_in'   => array( get_the_ID() ),
+			);
 
-	<footer class="entry-footer">
-		<?php hk_school_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+			$query = new WP_Query( $args );
+			echo '<h3>Meet other ' . esc_html( $term->name ) . ' students:</h3>';
+
+			// Display the links to other students
+			if ( $query->have_posts() ) {
+				while ( $query->have_posts() ) {
+					$query->the_post();
+					echo '<p><a href="' . esc_url( get_permalink() ) . '" class="main-link underline-link">' . get_the_title() . '</a></p>';
+				}
+				wp_reset_postdata();
+			}
+		}
+	}
+?>
