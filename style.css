@@ -656,6 +656,7 @@ body {
 	display: grid;
 	grid-template-columns: 1fr minmax(0, 1000px) 1fr;
 	grid-template-areas: "header header header" ". main ." ". sidebar ." "footer footer footer";
+	min-height: 100vh;
 }
 
 .site-header {
@@ -747,6 +748,13 @@ body {
 	padding: 1rem;
 	height: 100%;
 }
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_ancestor > a,
+.main-navigation .current-menu-ancestor > a {
+	background-color: #305C9F;
+}
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
