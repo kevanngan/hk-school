@@ -20,7 +20,7 @@ get_header();
 			<div class=entry-title>
 				<h1><?php the_title(); ?></h1>
 			</div>
-			<article class="single-student-content">
+			<article class="single-student-content student-item">
 					<?php
 					if ( has_post_thumbnail() ) {
 						the_post_thumbnail( 'student-thumbnail-284x300', array( 'class' => 'alignright' ) );
