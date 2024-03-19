@@ -10,46 +10,46 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<main id="primary" class="site-main">
 
-		<?php if ( have_posts() ) : ?>
+	<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-			<h1><?php echo single_term_title() . ' Students'; ?></h1>
-			</header><!-- .page-header -->
+		<header class="page-header">
+		<h1><?php echo single_term_title() . ' Students'; ?></h1>
+		</header><!-- .page-header -->
+
+		<?php
+		/* Start the Loop */
+		while ( have_posts() ) :
+			the_post();
+			?>
+			
+			<article class="student-item">
+				<a href="<?php the_permalink(); ?>" class="main-link underline-link">
+					<h2><?php the_title(); ?></h2>
+				</a>
+				<?php
+				if ( has_post_thumbnail() ) {
+					the_post_thumbnail( 'student-thumbnail-200px-300px', array( 'class' => 'alignleft' ) );
+				} 
+				?>
+				<?php the_content();?>
+			</article>
 
 			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-				?>
-				
-				<article class="student-item">
-					<a href="<?php the_permalink(); ?>" class="main-link underline-link">
-						<h2><?php the_title(); ?></h2>
-					</a>
-					<?php
-					if ( has_post_thumbnail() ) {
-						the_post_thumbnail( 'student-thumbnail-200px-300px', array( 'class' => 'alignleft' ) );
-					} 
-					?>
-					<?php the_content();?>
-				</article>
+		endwhile;
 
-				<?php
-			endwhile;
+		the_posts_navigation();
 
-			the_posts_navigation();
+	else :
 
-		else :
+		get_template_part( 'template-parts/content', 'none' );
 
-			get_template_part( 'template-parts/content', 'none' );
+	endif;
+	?>
+	
 
-		endif;
-		?>
-		
-
-	</main><!-- #primary -->
+</main><!-- #primary -->
 
 <?php
 get_footer();
