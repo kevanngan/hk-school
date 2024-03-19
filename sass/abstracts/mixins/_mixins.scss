@@ -46,17 +46,3 @@
     align-items: $align-items;
     gap: $gap;
 }
-
-// Absolutely position an element given top and left margins
-@mixin position-absolute($top: 0, $left: 0) {
-    position: absolute;
-    top: $top;
-    left: $left;
-}
-
-// Media Query
-@mixin mq($w) {
-    @media (min-width: $w) {
-        @content;
-    }
-}

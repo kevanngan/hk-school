@@ -17,10 +17,14 @@ get_header();
 
 <main id="primary" class="site-main">
 	<?php
-	while ( have_posts() ) :
-		the_post();
-		get_template_part( 'template-parts/content', 'hk-staff' );
-	endwhile; // End of the loop.
+	if ( have_posts() ) :
+		while ( have_posts() ) :
+			the_post();
+			get_template_part( 'template-parts/content', 'hk-staff' );
+		endwhile; // End of the loop.
+	else :
+		get_template_part( 'template-parts/content', 'none' );
+	endif;
 	?>
 </main><!-- #main -->
 
